@@ -1,6 +1,6 @@
 #include "TaskParam.h"
 #include "TaskGenerator.h"
-#include "config.h"
+#include "../config.h"
 #include "time.h"
 #include "stdlib.h"
 int n;

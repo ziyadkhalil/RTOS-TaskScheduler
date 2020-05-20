@@ -1,7 +1,7 @@
 #include "config.h"
 #include "stdio.h"
-#include "TaskParam.h"
-#include "TaskGenerator.h"
+#include "generator/TaskParam.h"
+#include "generator/TaskGenerator.h"
 
 extern int n; //Number of tasks
 

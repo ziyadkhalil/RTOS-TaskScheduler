@@ -1,0 +1,10 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+#define N 5
+#define TST 1
+#define LATEST_ARRIVAL_TIME 15
+#define MAXIMUM_COMPUTATION_TIME 8
+#define MAXIMUM_PERIOD_MULTIPLIER 7
+#define SAFE_MODE 333
+#define NO_GUARANTEE_MODE 444
+#endif // !CONFIG_H

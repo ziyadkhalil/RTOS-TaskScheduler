@@ -7,4 +7,5 @@
 #define MAXIMUM_PERIOD_MULTIPLIER 7
 #define SAFE_MODE 333
 #define NO_GUARANTEE_MODE 444
+#define STACK_SIZE 200
 #endif // !CONFIG_H

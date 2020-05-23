@@ -1,8 +1,10 @@
 #include "TaskParam.h"
 #include "TaskGenerator.h"
 #include "../config.h"
-#include "time.h"
-#include "stdlib.h"
+#include "stdlib.h"	
+#include <stdio.h>
+#include "Hash.h"
+
 int n;
 /**
  * 
@@ -10,9 +12,16 @@ int n;
  * @return a pointer to params
  */
 struct TaskParams* GenerateTasksParameters(int mode) {
-    srand(time(0)); // use current time as seed for random generator
-    n = 2 + rand() % (N-1);   //Setting number of tasks
+
+
+	//Every time you build edit this comment for the timestamp of the compiler changes
+	//Edits = 4
+	srand(hash(__TIME__)); // use compilation time as seed for random generator
+	printf("Time is : %s \nSeed is ->%lu  \n",__TIME__,hash(__TIME__));	
+
+	n = 2 + rand() % (N-1);   //Setting number of tasks
     struct TaskParams* params = (struct TaskParams*) calloc(n, sizeof(struct TaskParams)); //Allocating memory for the [TaskParams]
+	
     for (int i=0; i<n; i++) {
         params[i].tA = rand() % (LATEST_ARRIVAL_TIME + 1);
         params[i].tC = (1 + rand() % (MAXIMUM_COMPUTATION_TIME/TST)) * TST;
